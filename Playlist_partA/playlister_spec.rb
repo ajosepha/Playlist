@@ -1,3 +1,7 @@
+require './lib/artist.rb'
+require './lib/songs.rb'
+require './lib/genres.rb'
+
 describe "playlister" do
   it 'Can initialize an Artist' do
     lambda {Artist.new}.should_not raise_error
