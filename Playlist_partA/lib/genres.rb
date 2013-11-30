@@ -1,11 +1,26 @@
+
+
 class Genre
 
-attr_accessor :name, :songs
+    @@all = []
 
-def initialize
+    attr_accessor :name, :songs, :artists
+
+    def initialize
     @name = name
     @songs = []
-end
+    @artists = []
+    @@all << self
 
+    end
+
+
+    def self.reset_genres
+     @@all = []
+    end
+
+    def self.all
+    @@all
+    end
 
 end

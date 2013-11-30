@@ -31,6 +31,11 @@ class Artist
     def add_song(song)
         @songs << song
         @genre << song.genre
+         if song.genre 
+            unless song.genre.artists.include? self
+        song.genre.artists << self
+      end
+    end
     end
 
     def self.count
@@ -44,6 +49,10 @@ class Artist
     def self.all
         ARTISTS
     end
+
+    # def genres
+    #     songs.map{|song| song.genre}.uniq
+    # end
 
 #use .collect
   
