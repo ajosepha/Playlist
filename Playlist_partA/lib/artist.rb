@@ -38,6 +38,10 @@ class Artist
     end
     end
 
+    def genres
+    songs.map{|song| song.genre}.uniq
+    end
+
     def self.count
         @@count
     end
@@ -49,11 +53,5 @@ class Artist
     def self.all
         ARTISTS
     end
-
-    # def genres
-    #     songs.map{|song| song.genre}.uniq
-    # end
-
-#use .collect
   
 end
