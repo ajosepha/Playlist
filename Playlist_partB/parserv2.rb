@@ -55,8 +55,8 @@ class Parser
     end
 
 end
-parse = Parser.new
-ap parse.get_genres
+# parse = Parser.new
+# ap parse.get_genres
 
 
 
